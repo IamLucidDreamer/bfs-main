@@ -1,0 +1,42 @@
+/* Style the button indicators */
+.paging-dot {
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50% !important;
+  color: #fff !important;
+}
+
+.paging-dot:active {
+  background-color: #fff important;
+}
+
+[aria-label="next"] {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  padding-bottom: 17px !important;
+  padding-left: 15px !important;
+  background-color: black;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+[aria-label="previous"] {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  padding-bottom: 17px !important;
+  padding-right: 15px !important;
+  background-color: black;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
