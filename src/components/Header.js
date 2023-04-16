@@ -1,10 +1,6 @@
 import React from 'react';
 import AppLogo from './AppLogo';
 
-import Corousal from "nuka-carousel"
-import Card from './Card';
-import Footer from './Footer';
-
 const Header = ({ title, content }) => {
     return (
         <header>
@@ -60,36 +56,6 @@ const Header = ({ title, content }) => {
                     </button>
                 </ul>
             </div>
-            <div className='pb-20 max-w-screen-2xl mx-auto'>
-                <Corousal
-                    defaultControlsConfig={{ nextButtonText: ">", prevButtonText: "<" }}
-                    autoplay={true}
-                    autoplayInterval={6000}
-                    wrapAround={true}
-                    dragging={true}
-                    cellAlign="center"
-                    slidesToShow={1}
-                    className='relative'>
-                    <img src='https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516__480.jpg' className='min-h-[80vh] max-h-[80vh] bg-red-500 mx-auto w-full object-cover' />
-                    <div className='min-h-[80vh] bg-green-500 mx-auto'></div>
-                    <img src='https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516__480.jpg' className='min-h-[80vh] max-h-[80vh] bg-red-500 mx-auto w-full object-cover' />
-                    <div className='min-h-[80vh] bg-yellow-500 mx-auto'></div>
-                    <img src='https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516__480.jpg' className='min-h-[80vh] max-h-[80vh] bg-red-500 mx-auto w-full object-cover' />
-                    <div className='min-h-[80vh] bg-purple-500 mx-auto'></div>
-                    <img src='https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516__480.jpg' className='min-h-[80vh] max-h-[80vh] bg-red-500 mx-auto w-full object-cover' />
-                    <div className='min-h-[80vh] bg-orange-500 mx-auto'></div>
-                    <img src='https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516__480.jpg' className='min-h-[80vh] max-h-[80vh] bg-red-500 mx-auto w-full object-cover' />
-                    <div className='min-h-[80vh] bg-blue-500 mx-auto'></div>
-                </Corousal >
-            </div>
-            <h1 className='text-5xl font-semibold py-12 text-center font-playfair'>Recent Posts</h1>
-            <div className='max-w-screen-2xl px-4 lg:px-10 flex flex-wrap gap-6'>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </div>
-            <Footer />
         </header>
     );
 };
