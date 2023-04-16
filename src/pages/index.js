@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import { Inter } from 'next/font/google'
 import { useEffect, useState } from "react";
 import axios from "@/helpers/httpHelper";
+import { getBlogsByCategory } from "@/services/blogService";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,7 @@ export default function Home() {
   console.log(blogs, "hii");
 
   useEffect(() => {
-    axios.get("/blog/get-all?page=1&limit=4")
+    getBlogsByCategory(null, 1, 4)
       .then(res => { setBlogs(res?.data?.data?.blogs) })
       .catch(err => console.log("Error :", err))
   }, [])
