@@ -41,24 +41,24 @@ const Footer = () => {
                         <h2 className="mb-6 text-sm font-semibold text-white uppercase tracking-widest ">LINKS</h2>
                         <ul className="text-gray-300 font-medium text-base">
                             <li className="mb-4">
-                                <a href="#" className=" hover:underline">Some Menu Link 1</a>
+                                <a href="#" className=" hover:underline">Home</a>
                             </li>
                             <li className="mb-4">
-                                <a href="#" className=" hover:underline">Another new Link 2</a>
+                                <a href="#" className=" hover:underline">Blogs</a>
                             </li>
                             <li className="mb-4">
-                                <a href="#" className=" hover:underline">this is a Link 3</a>
+                                <a href="#" className=" hover:underline">Videos</a>
                             </li>
                             <li className="mb-4">
-                                <a href="#" className=" hover:underline">Link 4</a>
+                                <a href="#" className=" hover:underline">About Us</a>
                             </li>
                             <li className="mb-4">
-                                <a href="#" className=" hover:underline">Link 5</a>
+                                <a href="#" className=" hover:underline">Contact Us</a>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 className="mb-6 text-sm font-semibold text-white uppercase tracking-widest">CONNECT WITH US</h2>
+                        <h2 className="mb-6 text-sm font-semibold text-white uppercase tracking-widest">SUBSCRIBE TO OUR NEWSLETTER</h2>
                         <Formik
                             initialValues={{ email: "" }}
                             validationSchema={Yup.object({
@@ -73,6 +73,7 @@ const Footer = () => {
                                             id='email'
                                             name='email'
                                             type="email"
+                                            placeholder='hello@builtfromscratch.com'
                                             value={values.email}
                                             onChange={handleChange}
                                             className='border-2 border-secondary bg-transparent w-full lg:w-2/3 rounded-none text-white p-2 focus:border-white focus:outline-0'

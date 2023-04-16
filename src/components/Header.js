@@ -43,16 +43,16 @@ const Header = ({ title, content }) => {
                         Home
                     </button>
                     <button className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
-                        Menu 2
+                        Blogs
                     </button>
                     <button className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
-                        Menu 3
+                        Videos
                     </button>
                     <button className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
-                        Menu 4
+                        About Us
                     </button>
                     <button className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
-                        Menu 5
+                        Contact Us
                     </button>
                 </ul>
             </div>
