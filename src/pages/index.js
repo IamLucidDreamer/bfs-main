@@ -55,7 +55,7 @@ export default function Home() {
           {heroData.map(val => {
             return (
               <div className="relative pt-16 pb-32 flex content-center items-center justify-center z-10 min-h-[80vh]">
-                <div
+                <div 
                   className="absolute top-0 w-full h-full bg-center bg-cover"
                   style={{
                     backgroundImage: `url(${val?.bgImage})`,
