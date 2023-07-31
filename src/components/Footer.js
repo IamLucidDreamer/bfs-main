@@ -25,15 +25,15 @@ const Footer = () => {
                         <ul className="text-gray-300 font-medium text-base">
                             <li className="mb-4">
                                 <h3>Email :</h3>
-                                <a href="#" className=" hover:underline">hello@builtfromscratch.com</a>
+                                <a href="mailto:builtfromscratchh@gmail.com" className=" hover:underline">builtfromscratchh@gmail.com</a>
                             </li>
                             <li className="mb-4">
                                 <h3>Contact Number :</h3>
-                                <a href="#" className=" hover:underline">1234567890</a>
+                                <a href="tel:+918591332929" className=" hover:underline">+91-8591332929</a>
                             </li>
                             <li className="mb-4">
                                 <h3>Address :</h3>
-                                <a href="#" className=" hover:underline">Some where on earth,<br /> Mumbai, India</a>
+                                <a href="#" className=" hover:underline">Indrapuri Colony,<br /> Jabalpur, Madhya Pradesh, <br /> India</a>
                             </li>
                         </ul>
                     </div>
