@@ -15,7 +15,7 @@ const CardLarge = ({ value }) => {
             <div className='h-72 md:h-96 w-full md:w-1/3 relative'>
                 <Image
                     loader={myLoader}
-                    src={value?.imageSecondary}
+                    src={value?.imageSecondary || value?.imageMain}
                     alt="My Image"
                     fill
                     style={{ objectFit: "cover", objectPosition: "center" }}

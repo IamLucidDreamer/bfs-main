@@ -9,6 +9,7 @@ import { Inter } from 'next/font/google'
 import { useEffect, useState } from "react";
 import axios from "@/helpers/httpHelper";
 import { getBlogsByCategory } from "@/services/blogService";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,7 +56,7 @@ export default function Home() {
           {heroData.map(val => {
             return (
               <div className="relative pt-16 pb-32 flex content-center items-center justify-center z-10 min-h-[80vh]">
-                <div 
+                <div
                   className="absolute top-0 w-full h-full bg-center bg-cover"
                   style={{
                     backgroundImage: `url(${val?.bgImage})`,
@@ -86,13 +87,13 @@ export default function Home() {
           })}
         </Corousal >
         <h1 className='text-5xl font-semibold py-12 text-center font-playfair'>Recent Posts</h1>
-        <div className='max-w-screen-2xl px-4 lg:px-10 flex flex-wrap gap-10 items-center justify-center mb-8'>
+        <div className='max-w-screen-2xl px-4 lg:px-10 flex flex-wrap gap-10 items-start justify-center mb-8'>
           {blogs?.map(val => <Card value={val} />)}
         </div>
         <div className="w-full flex items-center justify-center">
-          <button className="p-2 border-2 bg-primary text-white font-semibold hover:bg-white hover:text-primary border-primary my-2">
+          <Link href="/blogs" className="p-2 border-2 bg-primary text-white font-semibold hover:bg-white hover:text-primary border-primary my-2">
             See More
-          </button>
+          </Link>
         </div>
       </div>
       <Footer />

@@ -10,11 +10,11 @@ const Card = ({ value }) => {
     }
 
     return (
-        <div className="w-full lg:w-5/12 bg-white hover:shadow-lg">
+        <div className="w-full lg:w-5/12 bg-white hover:shadow-lg self-stretch">
             <div className='h-72 md:h-96 relative'>
                 <Image
                     loader={myLoader}
-                    src={value?.imageSecondary}
+                    src={value?.imageSecondary || value?.imageMain}
                     alt="My Image"
                     fill
                     style={{ objectFit: "cover", objectPosition: "center" }}
@@ -23,7 +23,7 @@ const Card = ({ value }) => {
             <div className="p-5">
                 <div className='flex items-center justify-between m-2 mt-0'>
                     <h1 className='text-secondary text-lg'>By: {value?.userId?.name}</h1>
-                    <Link href="/category/[categoryTitle]" as={`/category/${value.tag}`}>
+                    <Link href="/category/[categoryTitle]" as={`/category/${value?.tag}`}>
                         <h1 className='border-2 border-secondary py-1.5 px-2 text-secondary'>{value?.tag}</h1>
                     </Link>
                 </div>
