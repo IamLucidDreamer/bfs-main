@@ -2,6 +2,7 @@ import { Formik } from 'formik'
 import * as Yup from "yup"
 import React, { useState } from 'react'
 import axios from '@/helpers/httpHelper'
+import Link from 'next/link'
 
 const Footer = () => {
 
@@ -41,10 +42,10 @@ const Footer = () => {
                         <h2 className="mb-6 text-sm font-semibold text-white uppercase tracking-widest ">LINKS</h2>
                         <ul className="text-gray-300 font-medium text-base">
                             <li className="mb-4">
-                                <a href="#" className=" hover:underline">Home</a>
+                                <Link href="/" className=" hover:underline">Home</Link>
                             </li>
                             <li className="mb-4">
-                                <a href="#" className=" hover:underline">Blogs</a>
+                                <Link href="/blogs" className=" hover:underline">Blogs</Link>
                             </li>
                             <li className="mb-4">
                                 <a href="#" className=" hover:underline">Videos</a>

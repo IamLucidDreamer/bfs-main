@@ -1,5 +1,6 @@
 import React from 'react';
 import AppLogo from './AppLogo';
+import Link from 'next/link';
 
 const Header = ({ title, content }) => {
     return (
@@ -39,12 +40,12 @@ const Header = ({ title, content }) => {
             </nav>
             <div className="hidden justify-center items-center w-full lg:flex lg:w-auto lg:order-1 border-border py-3" style={{ borderTopWidth: "1px" }}>
                 <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-28 lg:mt-0">
-                    <button className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
+                    <Link href="/" className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
                         Home
-                    </button>
-                    <button className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
+                    </Link>
+                    <Link href="/blogs" className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
                         Blogs
-                    </button>
+                    </Link>
                     <button className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
                         Videos
                     </button>
