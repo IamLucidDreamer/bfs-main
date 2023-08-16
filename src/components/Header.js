@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppLogo from './AppLogo';
 import Link from 'next/link';
 
 const Header = ({ title, content }) => {
+    const [show, setShow] = useState(false)
     return (
         <header>
             <nav className="px-4 lg:px-10 py-2.5">
@@ -10,7 +11,7 @@ const Header = ({ title, content }) => {
                     <a href="" className="flex items-center">
                         <AppLogo width={"50px"} height={"50px"} />
                     </a>
-                    <div className="flex mt-4 space-x-6 md:mt-0 ml-auto text-black">
+                    <div className="flex  space-x-6 ml-auto text-black">
                         <a href="https://www.facebook.com/profile.php?id=100095219374822&mibextid=ZbWKwL" target='_blank' referrerPolicy='no-referrer' className="text-secondary hover:text-gray-900">
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
                             <span className="sr-only">Facebook page</span>
@@ -29,7 +30,8 @@ const Header = ({ title, content }) => {
                         </a>
                     </div>
                     <div className="flex items-center lg:order-2">
-                        <button data-collapse-toggle="mobile-menu-2" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
+                        <button data-collapse-toggle="mobile-menu-2" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false"
+                            onClick={() => setShow(!show)}>
                             <span className="sr-only">Open main menu</span>
                             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                             <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -38,12 +40,12 @@ const Header = ({ title, content }) => {
 
                 </div>
             </nav>
-            <div className="hidden justify-center items-center w-full lg:flex lg:w-auto lg:order-1 border-border py-3" style={{ borderTopWidth: "1px" }}>
+            <div className={`${show ? "block" : "hidden"} justify-center items-center w-full lg:flex lg:w-auto lg:order-1 border-border py-3`} style={{ borderTopWidth: "1px" }}>
                 <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-28 lg:mt-0">
-                    <Link href="/" className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
+                    <Link href="/" className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500 text-center'>
                         Home
                     </Link>
-                    <Link href="/blogs" className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
+                    <Link href="/blogs" className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500 text-center'>
                         Blogs
                     </Link>
                     <button className='uppercase text-md text-secondary border-b-2 border-white hover:border-primary hover:text-primary duration-500'>
